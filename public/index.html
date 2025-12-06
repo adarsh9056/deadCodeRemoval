@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dead Code Analyzer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <span>Dead Code Analyzer</span>
+            </div>
+            <div class="nav-links">
+                <a href="https://github.com" target="_blank" title="View on GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="hero-section">
+                <h1>Dead Code Analyzer</h1>
+                <p>Optimize your C code by removing unused variables and functions</p>
+            </div>
+            
+            <div class="editor-container">
+                <div class="editor-box">
+                    <div class="editor-header">
+                        <div class="header-left">
+                            <h2><i class="fas fa-code"></i> Input Code</h2>
+                            <div class="editor-actions">
+                                <button id="load-sample" class="secondary-btn">
+                                    <i class="fas fa-file-code"></i> Load Sample
+                                </button>
+                                <button id="clear-input" class="secondary-btn">
+                                    <i class="fas fa-eraser"></i> Clear
+                                </button>
+                            </div>
+                        </div>
+                        <div class="language-badge">C</div>
+                    </div>
+                    <div class="editor-wrapper">
+                        <textarea id="input-editor"></textarea>
+                    </div>
+                </div>
+                
+                <div class="controls">
+                    <button id="analyze-btn" class="primary-btn">
+                        <i class="fas fa-magic"></i> Analyze Code
+                    </button>
+                </div>
+
+                <div class="editor-box">
+                    <div class="editor-header">
+                        <div class="header-left">
+                            <h2><i class="fas fa-check-circle"></i> Optimized Code</h2>
+                            <div class="editor-actions">
+                                <button id="copy-output" class="secondary-btn">
+                                    <i class="fas fa-copy"></i> Copy Code
+                                </button>
+                                <button id="download-output" class="secondary-btn">
+                                    <i class="fas fa-download"></i> Download
+                                </button>
+                            </div>
+                        </div>
+                        <div class="stats-badge">
+                            <span id="optimization-stats">Optimization: --</span>
+                        </div>
+                    </div>
+                    <div class="editor-wrapper">
+                        <textarea id="output-editor"></textarea>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>Dead Code Analyzer Tool &copy; 2024</p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">About</a>
+                    <a href="#" class="footer-link">Documentation</a>
+                    <a href="#" class="footer-link">GitHub</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/clike/clike.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html> 
